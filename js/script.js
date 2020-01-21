@@ -5,14 +5,22 @@
 
 // ARRAY in cui inserire i numeri random generati
 var randomNumbers = [];
-// INSERISCO NUMERI IN ARRAY
+// GENERO ED INSERISCO NUMERI IN ARRAY
 for (var i = 0; i < 5; i++) {
   randomNumbers.push(getRandomNumber(1, 100))
 }
 console.log(randomNumbers);
 
+// IMPOSTO TIMEOUT DI 30 secondi
 
 
+
+// CREO FUNZIONE PROMPT INSERIMENTO numeri
+var userNumbers = [];
+for (var i = 0; i < 5; i++) {
+  userNumbers.push(parseInt(prompt('inserisci i numeri')))
+}
+console.log(userNumbers);
 // FUNZIONE PER NUMERI RANDOM
 function getRandomNumber (min, max) {
   min = Math.ceil(min);
