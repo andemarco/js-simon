@@ -17,7 +17,12 @@ setTimeout(playTheGame, 30000);
 // CREO FUNZIONE GIOCO MEMORY
 function playTheGame() {
   while (userNumbers.length < 5) {
-    userNumbers.push(parseInt(prompt('inserisci qui, uno alla volta, i numeri memorizzati')))
+    var userNumber = parseInt(prompt('inserisci qui, uno alla volta, i numeri memorizzati'))
+    if (userNumbers.includes(userNumber)) {
+      alert('hai già inserito questo numero')
+    } else {
+      userNumbers.push(userNumber)
+    }
   }
   for (var i = 0; i < randomNumbers.length; i++) {
     if (randomNumbers.includes(userNumbers[i])) {
